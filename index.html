@@ -4,235 +4,296 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Jounce — Email worth opening</title>
-<meta name="description" content="Jounce is the design-first email platform for modern brands. Start from beautiful templates, build without code, and grow a list that opens, clicks, and buys. Coming soon." />
-<meta name="theme-color" content="#1A1917" />
+<meta name="description" content="Jounce is the email marketing platform with design and writing built in. Start from templates you'd actually send, build without code, and grow a list that opens, clicks, and buys. Coming soon." />
+<meta name="theme-color" content="#151515" />
 
 <!-- Open Graph -->
 <meta property="og:type" content="website" />
 <meta property="og:title" content="Jounce — Email worth opening" />
-<meta property="og:description" content="The design-first email platform for modern brands. Beautiful templates, a true drag-and-drop builder, and an audience that grows itself. Coming soon." />
+<meta property="og:description" content="The email marketing platform with design built in. Beautiful templates, a true drag-and-drop builder, and an audience that grows itself. Coming soon." />
 <meta property="og:url" content="https://jounce.com" />
 <meta name="twitter:card" content="summary_large_image" />
 
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%231A1917'/%3E%3Cg transform='translate(26,24) scale(2.08)' fill='%23FAF8F3'%3E%3Cpath d='M13.5875 4.95495L22.2525 0H22.4842L18.8437 16.9643C18.2658 19.62 17.1448 21.6232 15.4805 22.9739C13.8394 24.3246 11.4933 25 8.44215 25C6.68545 25 5.17144 24.7367 3.90014 24.2102C2.65196 23.6836 1.68115 22.9167 0.987711 21.9093C0.406507 21.0359 0.0772702 20.0076 0 18.8244L7.69689 14.4231H8.02609L7.6447 16.2431C7.57536 16.5865 7.54068 16.8956 7.54068 17.1703C7.54068 17.6969 7.66782 18.0746 7.92208 18.3036C8.19945 18.5325 8.5924 18.647 9.10092 18.647C9.65567 18.647 10.0833 18.4753 10.3838 18.1319C10.7074 17.7885 10.9501 17.2505 11.1119 16.5179L13.5875 4.95495Z'/%3E%3C/g%3E%3C/svg%3E" />
+<!-- favicon: the Jounce J-mark on carbon -->
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%23151515'/%3E%3Cg transform='translate(26,24) scale(2.08)' fill='%23F5F5F5'%3E%3Cpath d='M13.5875 4.95495L22.2525 0H22.4842L18.8437 16.9643C18.2658 19.62 17.1448 21.6232 15.4805 22.9739C13.8394 24.3246 11.4933 25 8.44215 25C6.68545 25 5.17144 24.7367 3.90014 24.2102C2.65196 23.6836 1.68115 22.9167 0.987711 21.9093C0.406507 21.0359 0.0772702 20.0076 0 18.8244L7.69689 14.4231H8.02609L7.6447 16.2431C7.57536 16.5865 7.54068 16.8956 7.54068 17.1703C7.54068 17.6969 7.66782 18.0746 7.92208 18.3036C8.19945 18.5325 8.5924 18.647 9.10092 18.647C9.65567 18.647 10.0833 18.4753 10.3838 18.1319C10.7074 17.7885 10.9501 17.2505 11.1119 16.5179L13.5875 4.95495Z'/%3E%3C/g%3E%3C/svg%3E" />
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<!-- Inter + JetBrains Mono = the chrome. Playfair Display + Great Vibes are
+     used ONLY inside the email-preview frames (the user's warm work, §44). -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400..700&family=JetBrains+Mono:wght@400;500&family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400&family=Great+Vibes&display=swap" rel="stylesheet" />
 <!-- gate the scroll-reveal on JS so content is never hidden if scripts fail -->
 <script>document.documentElement.className = 'js';</script>
 
 <style>
+  /* =========================================================================
+     JOUNCE — carbon + mint, applied to the public marketing page.
+     Chrome is carbon + mint (Inter / JetBrains Mono). The email PREVIEWS are
+     the user's warm/editorial work, shown inside frames — the frame rule (§44):
+     a calm tool making loud work. Tokens lifted from brand/assets/jounce.css.
+     ========================================================================= */
   :root{
-    --ink:#1A1917;
-    --ink-soft:#56524b;
-    --ink-faint:#8a857c;
-    --paper:#FAF8F3;
-    --paper-2:#F2ECE1;
-    --card:#ffffff;
-    --line:rgba(26,25,23,.12);
-    --line-soft:rgba(26,25,23,.07);
-    --accent:#6C4BF0;
-    --shadow-sm:0 1px 2px rgba(26,25,23,.04), 0 8px 24px -12px rgba(26,25,23,.18);
-    --shadow-lg:0 2px 6px rgba(26,25,23,.05), 0 40px 80px -32px rgba(26,25,23,.32);
-    --serif:'Playfair Display', Georgia, 'Times New Roman', serif;
-    --sans:'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-    --maxw:1140px;
+    /* primitives */
+    --carbon-0:#FFFFFF; --carbon-50:#F8F8F8; --carbon-100:#F2F2F2;
+    --carbon-150:#E9E9E9; --carbon-200:#DEDEDE; --carbon-250:#C9C9C9;
+    --carbon-300:#B5B5B5; --carbon-400:#909090; --carbon-500:#6F6F6F;
+    --carbon-600:#515151; --carbon-700:#363636; --carbon-800:#222222;
+    --carbon-850:#1B1B1B; --carbon-900:#151515; --carbon-950:#0F0F0F;
+    --mint-200:#9CF5DB; --mint-300:#4FF0C0; --mint-400:#22E3B5;
+    --mint-500:#0BC397; --mint-600:#0AA180; --mint-700:#0C7E66; --mint-950:#052B1E;
+    --mint-flare:#53FDCA; --flare-glow:rgba(83,253,202,.10); --flare-veil:rgba(83,253,202,.20);
+
+    /* type */
+    --font-ui:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+    --font-mono:"JetBrains Mono","SF Mono",Menlo,Consolas,monospace;
+    --fs-body:0.9375rem; --fs-caption:0.8125rem; --fs-micro:0.6875rem;
+
+    /* shape + depth */
+    --radius-sm:6px; --radius-md:8px; --radius-lg:12px; --radius-pill:999px;
+    --shadow-hairline:0 1px 2px 0 rgba(0,0,0,.08);
+    --shadow-raised:0 1px 3px rgba(0,0,0,.06), 0 2px 8px -2px rgba(0,0,0,.08);
+    --shadow-overlay:0 4px 16px -4px rgba(0,0,0,.17), 0 0 1px 1px rgba(0,0,0,.05);
+    --shadow-modal:0 24px 48px -12px rgba(0,0,0,.28), 0 0 1px 1px rgba(0,0,0,.06);
+
+    /* motion */
+    --dur-fast:140ms; --dur-smooth:220ms; --dur-settle:320ms; --dur-reveal:480ms;
+    --ease-standard:cubic-bezier(.2,0,.2,1);
+    --ease-out:cubic-bezier(0,0,.2,1);
+    --ease-jounce:cubic-bezier(.34,1.28,.36,1);
+
+    /* semantic · light (the page default; reading body lives here) */
+    --emphasis:var(--carbon-900);
+    --bg-page:var(--carbon-0); --bg-card:var(--carbon-0);
+    --bg-sunken:var(--carbon-50); --bg-hover:var(--carbon-50);
+    --text-primary:var(--carbon-900); --text-secondary:var(--carbon-600);
+    --text-tertiary:var(--carbon-500); --text-placeholder:var(--carbon-400);
+    --text-on-mint:var(--carbon-900);
+    --border-subtle:var(--carbon-100); --border-default:var(--carbon-150); --border-strong:var(--carbon-200);
+    --accent:var(--mint-300); --accent-hover:var(--mint-400); --accent-active:var(--mint-500);
+    --accent-text:var(--mint-700); --accent-ring:var(--mint-600);
+    --success:var(--mint-700);
+    --maxw:1180px;
   }
+
+  /* dark bands — the native key (§05). Scoped so the page can move dark → light
+     → dark without a theme switch fighting the art direction. */
+  .band-dark{
+    --emphasis:#F5F5F5;
+    --bg-page:var(--carbon-900); --bg-card:var(--carbon-850);
+    --bg-sunken:var(--carbon-950); --bg-hover:rgba(255,255,255,.04);
+    --text-primary:#F5F5F5; --text-secondary:var(--carbon-250);
+    --text-tertiary:var(--carbon-400); --text-placeholder:var(--carbon-500);
+    --text-on-mint:var(--carbon-900);
+    --border-subtle:rgba(255,255,255,.06); --border-default:rgba(255,255,255,.09); --border-strong:rgba(255,255,255,.16);
+    --accent:var(--mint-400); --accent-hover:var(--mint-300); --accent-active:var(--mint-200);
+    --accent-text:var(--mint-400); --accent-ring:var(--mint-400);
+    --success:var(--mint-400);
+    --shadow-hairline:0 1px 2px rgba(0,0,0,.40);
+    --shadow-raised:0 2px 6px rgba(0,0,0,.45);
+    --shadow-overlay:0 8px 24px rgba(0,0,0,.55);
+    --shadow-modal:0 24px 48px -12px rgba(0,0,0,.66);
+    background:var(--bg-page); color:var(--text-primary);
+  }
+
   *{box-sizing:border-box;margin:0;padding:0}
-  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;background:var(--carbon-900)}
   body{
-    font-family:var(--sans);
-    background:var(--paper);
-    color:var(--ink);
-    line-height:1.6;
-    -webkit-font-smoothing:antialiased;
-    text-rendering:optimizeLegibility;
-    overflow-x:hidden;
+    font-family:var(--font-ui); background:var(--bg-page); color:var(--text-primary);
+    font-size:var(--fs-body); line-height:1.55;
+    -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility; overflow-x:hidden;
   }
   a{color:inherit;text-decoration:none}
   img{display:block;max-width:100%}
-  ::selection{background:rgba(108,75,240,.18)}
+  ::selection{background:var(--flare-veil)}
+  .num{font-family:var(--font-mono);font-variant-numeric:tabular-nums slashed-zero;font-feature-settings:"tnum" 1,"zero" 1;letter-spacing:-.01em}
+  :focus-visible{outline:none;box-shadow:0 0 0 2px var(--bg-page),0 0 0 4px var(--emphasis);border-radius:var(--radius-sm)}
 
   .wrap{width:100%;max-width:var(--maxw);margin:0 auto;padding:0 28px}
-  .serif{font-family:var(--serif)}
-  .eyebrow{
-    font-size:12px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;
-    color:var(--ink-faint);
+  .eyebrow{font-size:var(--fs-micro);font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--text-tertiary)}
+
+  /* ---------------- buttons ---------------- */
+  .btn{
+    display:inline-flex;align-items:center;justify-content:center;gap:8px;
+    height:44px;padding:0 22px;border:none;border-radius:var(--radius-md);
+    font-family:var(--font-ui);font-size:var(--fs-body);font-weight:500;cursor:pointer;white-space:nowrap;
+    transition:background-color var(--dur-fast) var(--ease-standard),border-color var(--dur-fast) var(--ease-standard),color var(--dur-fast) var(--ease-standard),transform 80ms var(--ease-standard);
   }
+  .btn:active{transform:translateY(.5px) scale(.99)}
+  .btn-primary{background:var(--accent);color:var(--text-on-mint)}
+  .btn-primary:hover{background:var(--accent-hover)}
+  .btn-primary:active{background:var(--accent-active)}
+  .btn-primary:focus-visible{box-shadow:0 0 0 2px var(--bg-page),0 0 0 4px var(--accent-ring)}
+  .btn-ghost{background:transparent;color:var(--text-secondary)}
+  .btn-ghost:hover{background:var(--bg-hover);color:var(--text-primary)}
 
   /* ---------------- nav ---------------- */
   header{position:absolute;top:0;left:0;right:0;z-index:20}
-  .nav{display:flex;align-items:center;justify-content:space-between;padding:26px 28px;max-width:var(--maxw);margin:0 auto}
-  .brand{display:inline-flex;align-items:center;color:var(--ink)}
-  .brand .wordmark{height:25px;width:auto;display:block}
-  .nav .pill{
-    display:inline-flex;align-items:center;gap:8px;font-family:var(--sans);
-    font-size:13px;font-weight:500;color:var(--ink-soft);
-    border:1px solid var(--line);border-radius:999px;padding:7px 14px;background:rgba(255,255,255,.5);
-    backdrop-filter:blur(6px);
+  .nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:22px 28px;max-width:var(--maxw);margin:0 auto}
+  .brand{display:inline-flex;align-items:center;color:var(--text-primary)}
+  .brand .wordmark{height:21px;width:auto;display:block}
+  .pill{
+    display:inline-flex;align-items:center;gap:8px;font-size:var(--fs-caption);font-weight:500;color:var(--text-secondary);
+    border:1px solid var(--border-default);border-radius:var(--radius-pill);padding:6px 13px;background:var(--bg-hover);
   }
-  .dot{width:7px;height:7px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 0 rgba(108,75,240,.5);animation:pulse 2.4s infinite}
-  @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(108,75,240,.45)}70%{box-shadow:0 0 0 7px rgba(108,75,240,0)}100%{box-shadow:0 0 0 0 rgba(108,75,240,0)}}
+  .dot{width:7px;height:7px;border-radius:50%;background:var(--accent);position:relative;flex:none}
+  .dot::after{content:"";position:absolute;inset:-4px;border-radius:50%;background:var(--flare-veil);animation:livePulse 2.4s var(--ease-standard) infinite}
+  @keyframes livePulse{0%,100%{transform:scale(.6);opacity:0}40%{transform:scale(1);opacity:1}}
 
-  /* ---------------- hero ---------------- */
-  .hero{position:relative;padding:148px 0 96px}
-  .hero::before{
-    content:"";position:absolute;inset:0;z-index:0;pointer-events:none;
-    background:
-      radial-gradient(900px 480px at 78% 8%, rgba(108,75,240,.07), transparent 60%),
-      radial-gradient(700px 420px at 8% 30%, rgba(196,97,59,.06), transparent 55%);
+  /* ---------------- hero (dark) ---------------- */
+  .hero{position:relative;padding:150px 0 104px;overflow:hidden}
+  .hero::before{ /* the one sanctioned mint glow — a whisper behind the work */
+    content:"";position:absolute;z-index:0;pointer-events:none;
+    width:760px;height:560px;right:-6%;top:2%;
+    background:radial-gradient(closest-side,var(--flare-glow),transparent 72%);
   }
-  .hero .wrap{position:relative;z-index:1;display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
-  .hero h1{
-    font-family:var(--serif);font-weight:500;letter-spacing:-.02em;line-height:1.02;
-    font-size:clamp(2.9rem,5.6vw,4.7rem);margin:22px 0 0;
-  }
-  .hero h1 em{font-style:italic;color:var(--accent)}
-  .hero .lede{font-size:clamp(1.05rem,1.4vw,1.2rem);color:var(--ink-soft);max-width:30em;margin:24px 0 0}
+  .hero .wrap{position:relative;z-index:1;display:grid;grid-template-columns:1.02fr .98fr;gap:60px;align-items:center}
+  .hero h1{font-size:clamp(2.5rem,5.2vw,3.5rem);line-height:1.04;font-weight:650;letter-spacing:-.022em;margin:18px 0 0;max-width:13ch}
+  .hero .lede{font-size:clamp(1.02rem,1.3vw,1.15rem);line-height:1.6;color:var(--text-secondary);max-width:33em;margin:20px 0 0}
 
   /* email capture */
-  .capture{margin-top:34px;max-width:440px}
-  .capture form{display:flex;gap:9px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:7px;box-shadow:var(--shadow-sm)}
-  .capture input{
-    flex:1;border:0;outline:0;background:transparent;font-family:var(--sans);font-size:15px;color:var(--ink);padding:0 12px;min-width:0;
-  }
-  .capture input::placeholder{color:var(--ink-faint)}
-  .btn{
-    font-family:var(--sans);font-size:14.5px;font-weight:600;cursor:pointer;border:0;
-    background:var(--ink);color:var(--paper);padding:12px 20px;border-radius:9px;white-space:nowrap;
-    transition:transform .15s ease, opacity .15s ease;
-  }
-  .btn:hover{transform:translateY(-1px);opacity:.92}
-  .capture .micro{font-size:13px;color:var(--ink-faint);margin-top:12px;display:flex;align-items:center;gap:7px}
-  .capture .micro svg{flex:none}
+  .capture{margin-top:30px;max-width:460px}
+  .capture form{display:flex;gap:9px;background:var(--bg-card);border:1px solid var(--border-default);border-radius:12px;padding:7px;transition:border-color var(--dur-fast) var(--ease-standard),box-shadow var(--dur-fast) var(--ease-standard)}
+  .capture form:focus-within{border-color:var(--emphasis);box-shadow:0 0 0 1px var(--emphasis)}
+  .capture input{flex:1;border:0;outline:0;background:transparent;font-family:var(--font-ui);font-size:var(--fs-body);color:var(--text-primary);padding:0 12px;min-width:0}
+  .capture input::placeholder{color:var(--text-placeholder)}
+  .capture .micro{font-size:var(--fs-caption);color:var(--text-tertiary);margin-top:13px;display:flex;align-items:center;gap:7px}
+  .capture .micro svg{flex:none;color:var(--text-tertiary)}
   .capture.done form{display:none}
-  .capture .thanks{display:none;align-items:center;gap:11px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 18px;box-shadow:var(--shadow-sm);font-size:15px}
+  .capture .thanks{display:none;align-items:center;gap:11px;background:var(--bg-card);border:1px solid var(--border-default);border-radius:12px;padding:15px 18px;font-size:var(--fs-body)}
   .capture.done .thanks{display:flex}
   .capture.done .micro{display:none}
-  .check{width:24px;height:24px;border-radius:50%;background:var(--accent);color:#fff;display:grid;place-items:center;flex:none}
+  .check{width:24px;height:24px;border-radius:50%;background:var(--accent);color:var(--text-on-mint);display:grid;place-items:center;flex:none}
 
-  /* hero visual: stacked email previews */
-  .stage{position:relative;height:520px}
-  .card-email{
-    position:absolute;background:var(--card);border-radius:16px;overflow:hidden;
-    box-shadow:var(--shadow-lg);border:1px solid var(--line-soft);
+  /* hero stage — framed warm email specimens (a tidy fan, still at rest) */
+  .stage{position:relative;height:540px}
+  .frame{
+    position:absolute;background:var(--bg-card);border:1px solid var(--border-subtle);
+    border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-overlay);
   }
-  .card-email img{width:100%;height:100%;object-fit:cover}
-  .ce-photo{aspect-ratio:4/3;overflow:hidden}
-  .ce-photo img{aspect-ratio:4/3}
-  .ce-body{padding:16px 18px 20px}
-  .ce-cat{font-size:10.5px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-faint)}
-  .ce-title{font-family:var(--serif);font-size:21px;line-height:1.15;margin:7px 0 6px;font-weight:600}
-  .ce-text{font-size:12.5px;color:var(--ink-soft);line-height:1.5}
-  .ce-btn{display:inline-block;margin-top:13px;font-size:11px;font-weight:600;letter-spacing:.04em;background:var(--ink);color:var(--paper);padding:8px 16px;border-radius:6px}
+  .frame .inbox-line{padding:13px 15px;border-bottom:1px solid var(--border-subtle);background:var(--bg-card)}
+  .inbox-line .subj{display:block;color:var(--text-primary);font-weight:500;font-size:var(--fs-caption)}
+  .inbox-line .from{display:block;margin-top:2px;font-size:var(--fs-micro);color:var(--text-tertiary);font-family:var(--font-mono);letter-spacing:-.01em}
+  .frame .spec{overflow:hidden}
+  .stage .f1{width:330px;left:4%;top:54px;z-index:3}
+  .stage .f2{width:260px;right:1%;top:0;z-index:2;transform:rotate(2.5deg)}
+  .stage .f3{width:250px;left:1%;bottom:0;z-index:1;transform:rotate(-3deg)}
+  .js .frame{opacity:0;transform:translateY(14px) scale(.985)}
+  .js .frame.f2{transform:translateY(14px) scale(.985) rotate(2.5deg)}
+  .js .frame.f3{transform:translateY(14px) scale(.985) rotate(-3deg)}
+  .js .frame.in{animation:draftIn var(--dur-reveal) var(--ease-jounce) forwards}
+  .js .frame.f2.in{animation:draftInB var(--dur-reveal) var(--ease-jounce) forwards}
+  .js .frame.f3.in{animation:draftInC var(--dur-reveal) var(--ease-jounce) forwards}
+  @keyframes draftIn{to{opacity:1;transform:translateY(0) scale(1)}}
+  @keyframes draftInB{to{opacity:1;transform:translateY(0) scale(1) rotate(2.5deg)}}
+  @keyframes draftInC{to{opacity:1;transform:translateY(0) scale(1) rotate(-3deg)}}
 
-  .stage .c1{width:300px;left:8%;top:40px;z-index:3;animation:float1 7s ease-in-out infinite}
-  .stage .c2{width:228px;right:2%;top:0;z-index:2;transform:rotate(3deg);animation:float2 8s ease-in-out infinite}
-  .stage .c3{width:240px;left:0;bottom:8px;z-index:1;transform:rotate(-4deg);animation:float3 9s ease-in-out infinite}
-  @keyframes float1{0%,100%{transform:translateY(0)}50%{transform:translateY(-14px)}}
-  @keyframes float2{0%,100%{transform:rotate(3deg) translateY(0)}50%{transform:rotate(3deg) translateY(-18px)}}
-  @keyframes float3{0%,100%{transform:rotate(-4deg) translateY(0)}50%{transform:rotate(-4deg) translateY(-10px)}}
+  /* =========================================================================
+     DESIGNED COMPOSITIONS — the real image-mode email library (the user's warm
+     work, NOT carbon+mint — the frame rule, §44). Each is authored on its native
+     600px canvas, exactly as it rasterizes at send; fitComps() in the script
+     scales each to its frame width so they stay crisp and fully responsive.
+     Geometry mirrors preview-harness/designed-compositions-mockup.html.
+     ========================================================================= */
+  .comp-fit{position:relative;width:100%;overflow:hidden;background:#fbfaf8}
+  .comp-canvas{position:absolute;top:0;left:0;width:600px;transform-origin:top left;transform:scale(.5)}
+  .comp-canvas img{display:block}
+  .comp-canvas .ser{font-family:'Playfair Display',Georgia,serif}
+  .comp-canvas .scr{font-family:'Great Vibes','Playfair Display',cursive}
 
-  /* ---------------- marquee trust ---------------- */
-  .trust{border-top:1px solid var(--line-soft);border-bottom:1px solid var(--line-soft);background:rgba(255,255,255,.4)}
-  .trust .wrap{padding:26px 28px;display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap;text-align:center}
-  .trust p{font-size:14.5px;color:var(--ink-soft)}
-  .trust strong{color:var(--ink);font-weight:600}
+  /* ---------------- trust band ---------------- */
+  .trust .wrap{padding:24px 28px;display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap;text-align:center}
+  .trust p{font-size:var(--fs-body);color:var(--text-secondary)}
+  .trust strong{color:var(--text-primary);font-weight:600}
 
   /* ---------------- section scaffolding ---------------- */
-  section.block{padding:clamp(80px,11vw,140px) 0}
-  .head{max-width:640px}
-  .head h2{font-family:var(--serif);font-weight:500;letter-spacing:-.02em;line-height:1.08;font-size:clamp(2rem,3.6vw,3rem);margin:14px 0 0}
-  .head p{font-size:clamp(1.02rem,1.3vw,1.15rem);color:var(--ink-soft);margin:18px 0 0;max-width:34em}
-  .center{margin-left:auto;margin-right:auto;text-align:center}
-  .center p{margin-left:auto;margin-right:auto}
+  section.block{padding:clamp(76px,10vw,128px) 0}
+  .head{max-width:660px}
+  .head h2{font-size:clamp(1.9rem,3.4vw,2.6rem);font-weight:600;letter-spacing:-.018em;line-height:1.1;margin:13px 0 0}
+  .head p{font-size:clamp(1rem,1.2vw,1.1rem);color:var(--text-secondary);margin:16px 0 0;max-width:36em}
 
-  /* templates gallery */
-  .templates{background:var(--paper-2)}
-  .grid-t{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:56px}
-  .tcard{background:var(--card);border-radius:16px;overflow:hidden;border:1px solid var(--line-soft);box-shadow:var(--shadow-sm);transition:transform .35s cubic-bezier(.2,.7,.2,1),box-shadow .35s}
-  .tcard:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg)}
-  .tcard .ph{aspect-ratio:5/4;overflow:hidden}
-  .tcard .ph img{width:100%;height:100%;object-fit:cover;transition:transform .6s cubic-bezier(.2,.7,.2,1)}
-  .tcard:hover .ph img{transform:scale(1.05)}
-  .tcard .meta{padding:20px 22px 24px}
-  .tcard .cat{font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
-  .tcard h3{font-family:var(--serif);font-weight:600;font-size:23px;margin:9px 0 7px;letter-spacing:-.01em}
-  .tcard p{font-size:14px;color:var(--ink-soft)}
+  /* templates gallery — real designed compositions, flowed as a template wall */
+  .grid-t{column-count:3;column-gap:24px;margin-top:52px}
+  .tcard{margin:0 0 24px;break-inside:avoid;background:var(--bg-card);border:1px solid var(--border-subtle);border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-raised);transition:transform var(--dur-smooth) var(--ease-out),box-shadow var(--dur-smooth) var(--ease-out),border-color var(--dur-smooth) var(--ease-out)}
+  .tcard:hover{transform:translateY(-4px);box-shadow:var(--shadow-overlay);border-color:var(--border-strong)}
+  .tcard .inbox-line{padding:14px 16px;border-bottom:1px solid var(--border-subtle)}
+  .tcard .cap{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:14px 16px;border-top:1px solid var(--border-subtle)}
+  .tcard .cap .cat{font-size:var(--fs-micro);font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--text-tertiary)}
+  .tcard .cap .nm{font-size:var(--fs-caption);font-weight:500;color:var(--text-primary)}
 
   /* features */
-  .grid-f{display:grid;grid-template-columns:repeat(3,1fr);gap:28px 34px;margin-top:60px}
-  .feat{padding-top:26px;border-top:1px solid var(--line)}
-  .feat .ic{width:42px;height:42px;border-radius:11px;background:var(--ink);color:var(--paper);display:grid;place-items:center;margin-bottom:18px}
-  .feat h3{font-family:var(--serif);font-weight:600;font-size:22px;letter-spacing:-.01em;margin-bottom:8px}
-  .feat p{font-size:14.5px;color:var(--ink-soft)}
+  .grid-f{display:grid;grid-template-columns:repeat(3,1fr);gap:30px 36px;margin-top:60px}
+  .feat{padding-top:24px;border-top:1px solid var(--border-default)}
+  .feat .ic{width:40px;height:40px;border-radius:var(--radius-md);background:var(--bg-sunken);border:1px solid var(--border-subtle);color:var(--text-primary);display:grid;place-items:center;margin-bottom:18px}
+  .feat .ic svg{width:20px;height:20px;stroke:currentColor;fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+  .feat h3{font-size:1.1rem;font-weight:600;letter-spacing:-.01em;margin-bottom:7px}
+  .feat p{font-size:var(--fs-body);color:var(--text-secondary);line-height:1.55}
 
-  /* countdown highlight */
-  .spot{background:var(--ink);color:var(--paper)}
+  /* countdown spotlight (dark) */
   .spot .wrap{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
-  .spot .eyebrow{color:rgba(250,248,243,.55)}
-  .spot h2{font-family:var(--serif);font-weight:500;font-size:clamp(2rem,3.4vw,2.9rem);line-height:1.1;letter-spacing:-.02em;margin:14px 0 0}
-  .spot p{color:rgba(250,248,243,.72);font-size:1.08rem;margin:20px 0 0;max-width:32em}
-  .cd{background:#0f0e0d;border:1px solid rgba(250,248,243,.12);border-radius:18px;padding:38px 30px;text-align:center;box-shadow:var(--shadow-lg)}
-  .cd .lab{font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:rgba(250,248,243,.5);margin-bottom:22px}
-  .cd .clock{display:flex;justify-content:center;gap:14px}
-  .cd .u{min-width:74px}
-  .cd .n{font-family:var(--serif);font-size:clamp(2.4rem,5vw,3.4rem);font-weight:500;line-height:1;font-variant-numeric:tabular-nums;letter-spacing:.01em}
-  .cd .t{font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:rgba(250,248,243,.45);margin-top:10px}
-  .cd .sep{font-family:var(--serif);font-size:clamp(2rem,4vw,2.8rem);color:rgba(250,248,243,.3);line-height:1.1}
-  .cd .cap{margin-top:24px;font-size:12.5px;color:rgba(250,248,243,.45)}
+  .spot h2{font-size:clamp(1.9rem,3.2vw,2.5rem);font-weight:600;line-height:1.1;letter-spacing:-.018em;margin:13px 0 0}
+  .spot p{color:var(--text-secondary);font-size:1.05rem;margin:18px 0 0;max-width:32em}
+  .cd{background:var(--bg-sunken);border:1px solid var(--border-subtle);border-radius:var(--radius-lg);padding:34px 28px;text-align:center;box-shadow:var(--shadow-overlay)}
+  .cd .lab{display:inline-flex;align-items:center;gap:8px;font-size:var(--fs-micro);letter-spacing:.14em;text-transform:uppercase;color:var(--text-tertiary);margin-bottom:24px}
+  .cd .clock{display:flex;justify-content:center;gap:10px;align-items:baseline}
+  .cd .u{min-width:72px}
+  .cd .n{font-size:clamp(2.3rem,5vw,3.1rem);font-weight:500;line-height:1;color:var(--text-primary)}
+  .cd .t{font-size:var(--fs-micro);letter-spacing:.14em;text-transform:uppercase;color:var(--text-tertiary);margin-top:11px}
+  .cd .sep{font-size:clamp(1.8rem,4vw,2.6rem);color:var(--carbon-600);line-height:1.1;font-family:var(--font-mono)}
+  .cd .cap{margin-top:22px;font-size:var(--fs-caption);color:var(--text-tertiary)}
 
-  /* final cta */
+  /* final cta (dark) */
   .final{text-align:center}
-  .final h2{font-family:var(--serif);font-weight:500;font-size:clamp(2.2rem,4.4vw,3.4rem);letter-spacing:-.02em;line-height:1.05}
-  .final .lede{color:var(--ink-soft);font-size:1.1rem;margin:18px auto 0;max-width:30em}
-  .final .capture{margin:34px auto 0}
+  .final h2{font-size:clamp(2rem,4vw,3rem);font-weight:600;letter-spacing:-.02em;line-height:1.06}
+  .final .lede{color:var(--text-secondary);font-size:1.08rem;margin:16px auto 0;max-width:34em}
+  .final .capture{margin:30px auto 0}
+  .final .micro{justify-content:center}
 
-  /* footer */
-  footer{border-top:1px solid var(--line);padding:40px 0}
+  /* footer (dark) */
+  footer{border-top:1px solid var(--border-subtle);padding:40px 0}
   footer .wrap{display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap}
-  footer .brand .wordmark{height:20px}
-  footer .meta{font-size:13.5px;color:var(--ink-faint);display:flex;gap:22px;flex-wrap:wrap;align-items:center}
-  footer a:hover{color:var(--ink)}
+  footer .brand .wordmark{height:18px}
+  footer .meta{font-size:var(--fs-caption);color:var(--text-tertiary);display:flex;gap:22px;flex-wrap:wrap;align-items:center}
+  footer a:hover{color:var(--text-primary)}
 
-  /* reveal — only hides when JS is active (.js on <html>); content is always
-     visible without JS, and a safety timeout reveals everything even if the
-     observer never fires, so copy can never get stuck hidden */
-  .js .reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1)}
+  /* reveal — hides only when JS runs (.js on <html>); a timeout reveals all even
+     if the observer never fires, so copy can never get stuck hidden */
+  .js .reveal{opacity:0;transform:translateY(20px);transition:opacity var(--dur-reveal) var(--ease-out),transform var(--dur-reveal) var(--ease-out)}
   .js .reveal.in{opacity:1;transform:none}
 
-  @media (max-width:880px){
-    .hero{padding:128px 0 64px}
-    .hero .wrap{grid-template-columns:1fr;gap:8px}
-    .stage{height:430px;margin-top:30px;order:2}
-    .stage .c1{left:4%}
-    .grid-t{grid-template-columns:repeat(2,1fr);gap:20px}
-    .grid-f{grid-template-columns:1fr 1fr;gap:24px 28px}
-    .spot .wrap{grid-template-columns:1fr;gap:40px}
+  @media (max-width:900px){
+    .hero{padding:124px 0 72px}
+    .hero .wrap{grid-template-columns:1fr;gap:18px}
+    .stage{height:440px;margin-top:24px;order:2}
+    .stage .f1{left:2%}
+    .grid-t{column-count:2;column-gap:18px}
+    .grid-f{grid-template-columns:1fr 1fr;gap:26px 30px}
+    .spot .wrap{grid-template-columns:1fr;gap:36px}
   }
   @media (max-width:560px){
     .wrap{padding:0 20px}
-    .nav{padding:20px}
-    .nav .pill span.hide{display:none}
-    .grid-t{grid-template-columns:1fr;max-width:380px;margin-left:auto;margin-right:auto}
+    .nav{padding:18px 20px}
+    .pill .hide{display:none}
+    .grid-t{column-count:1;max-width:420px;margin-left:auto;margin-right:auto}
     .grid-f{grid-template-columns:1fr}
-    .stage{height:380px}
-    .stage .c2{width:190px}
-    .stage .c3{width:200px}
-    .capture form{flex-direction:column;padding:10px}
+    .stage{height:390px}
+    .stage .f1{width:300px}
+    .stage .f2{width:222px}
+    .stage .f3{width:212px}
+    .capture form{flex-direction:column;padding:9px}
     .capture .btn{width:100%}
     .cd .u{min-width:56px}
   }
   @media (prefers-reduced-motion:reduce){
     *{animation:none!important;scroll-behavior:auto}
-    .js .reveal{opacity:1;transform:none}
+    .js .reveal,.js .frame{opacity:1!important;transform:none!important}
+    .dot::after{display:none}
   }
 </style>
 </head>
 <body>
 
-<!-- Jounce wordmark (real brand logo from src/assets/logos/logo-big-dark.svg), defined once -->
+<!-- Jounce wordmark (real brand logo, src/assets/logos/logo-big-dark.svg), defined once.
+     Renders in currentColor so it flips with the band it sits in. -->
 <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
   <symbol id="jounce-wordmark" viewBox="0 0 126 25" fill="currentColor">
     <path fill-rule="evenodd" clip-rule="evenodd" d="M13.5875 4.95495L22.2525 0H22.4842L18.8437 16.9643C18.2658 19.62 17.1448 21.6232 15.4805 22.9739C13.8394 24.3246 11.4933 25 8.44215 25C6.68545 25 5.17144 24.7367 3.90014 24.2102C2.65196 23.6836 1.68115 22.9167 0.987711 21.9093C0.406507 21.0359 0.0772702 20.0076 0 18.8244L7.69689 14.4231H8.02609L7.6447 16.2431C7.57536 16.5865 7.54068 16.8956 7.54068 17.1703C7.54068 17.6969 7.66782 18.0746 7.92208 18.3036C8.19945 18.5325 8.5924 18.647 9.10092 18.647C9.65567 18.647 10.0833 18.4753 10.3838 18.1319C10.7074 17.7885 10.9501 17.2505 11.1119 16.5179L13.5875 4.95495Z"/>
@@ -244,6 +305,8 @@
   </symbol>
 </svg>
 
+<!-- ============================ DARK: top ============================ -->
+<div class="band-dark">
 <header>
   <nav class="nav">
     <a class="brand" href="#top" aria-label="Jounce"><svg class="wordmark" viewBox="0 0 126 25" role="img" aria-label="Jounce"><use href="#jounce-wordmark"/></svg></a>
@@ -252,45 +315,60 @@
 </header>
 
 <main id="top">
-
   <!-- HERO -->
   <section class="hero">
     <div class="wrap">
       <div class="hero-copy">
-        <span class="eyebrow">The design-first email platform</span>
-        <h1 class="serif">Email worth <em>opening.</em></h1>
+        <span class="eyebrow">Email marketing, design built in</span>
+        <h1>Email worth opening.</h1>
         <p class="lede">Jounce is email marketing for brands who sweat the details. Start from templates you'd actually send, build without touching code, and grow a list that opens, clicks, and buys.</p>
 
         <div class="capture" id="capture1">
           <form data-capture>
             <input type="email" name="email" placeholder="you@yourbrand.com" required autocomplete="email" aria-label="Email address" />
-            <button class="btn" type="submit">Request early access</button>
+            <button class="btn btn-primary" type="submit">Request early access</button>
           </form>
           <div class="micro">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
             Be first when the doors open. One note when it's live — no spam.
           </div>
-          <div class="thanks"><span class="check"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span> You're on the list. We'll be in touch soon.</div>
+          <div class="thanks"><span class="check"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span> You're on the list. We'll send one note when it's live.</div>
         </div>
       </div>
 
+      <!-- the work is the hero: real designed compositions, framed on carbon -->
       <div class="stage" aria-hidden="true">
-        <div class="card-email c1">
-          <div class="ce-photo"><img src="https://images.pexels.com/photos/4050315/pexels-photo-4050315.jpeg?auto=compress&cs=tinysrgb&w=900" alt="" loading="eager" /></div>
-          <div class="ce-body">
-            <div class="ce-cat">Welcome</div>
-            <div class="ce-title serif">A little hello from us</div>
-            <div class="ce-text">We're so glad you're here. Here's everything you need to get started — and a treat to say thanks.</div>
-            <span class="ce-btn">Start here</span>
+        <div class="frame f1">
+          <div class="inbox-line"><span class="subj">The new season is here</span><span class="from">Maison Verte → you</span></div>
+          <div class="comp-fit" data-ch="700">
+            <div class="comp-canvas" style="height:700px;background:#1a1917">
+              <img src="https://images.pexels.com/photos/3094218/pexels-photo-3094218.jpeg?auto=compress&cs=tinysrgb&w=900" alt="" style="position:absolute;inset:0;width:600px;height:700px;object-fit:cover" />
+              <div style="position:absolute;inset:0;background:rgba(26,25,23,.42)"></div>
+              <div style="position:absolute;left:48px;top:488px;width:400px;color:#fbfaf8;font-size:11px;letter-spacing:4px;text-transform:uppercase">The new season</div>
+              <div class="ser" style="position:absolute;left:48px;top:524px;width:480px;font-size:54px;line-height:115%;color:#fbfaf8">Worth the wait.</div>
+              <div style="position:absolute;left:48px;top:622px;padding:14px 30px;border:1px solid #fbfaf8;color:#fbfaf8;font-size:12px;letter-spacing:2px;text-transform:uppercase">See it first</div>
+            </div>
           </div>
         </div>
-        <div class="card-email c2">
-          <div class="ce-photo"><img src="https://images.pexels.com/photos/9558577/pexels-photo-9558577.jpeg?auto=compress&cs=tinysrgb&w=600" alt="" loading="lazy" /></div>
-          <div class="ce-body"><div class="ce-cat">Launch</div><div class="ce-title serif">It's finally here</div></div>
+        <div class="frame f2">
+          <div class="inbox-line"><span class="subj">The new collection</span><span class="from">Atelier → you</span></div>
+          <div class="comp-fit" data-ch="720">
+            <div class="comp-canvas" style="height:720px;background:#f4f1eb">
+              <img src="https://images.pexels.com/photos/5704849/pexels-photo-5704849.jpeg?auto=compress&cs=tinysrgb&w=900" alt="" style="position:absolute;left:168px;top:0;width:432px;height:640px;object-fit:cover" />
+              <div style="position:absolute;left:48px;top:120px;width:300px;color:#1a1917;font-size:11px;letter-spacing:4px;text-transform:uppercase">The new collection</div>
+              <div class="ser" style="position:absolute;left:48px;top:162px;width:460px;font-size:76px;line-height:112%;color:#1a1917">Begin<br />again.</div>
+              <div style="position:absolute;left:48px;top:668px;width:504px;color:#8a8578;font-size:11px;letter-spacing:3px;text-transform:uppercase">Spring, considered &nbsp;·&nbsp; Nº 04</div>
+            </div>
+          </div>
         </div>
-        <div class="card-email c3">
-          <div class="ce-photo"><img src="https://images.pexels.com/photos/6311392/pexels-photo-6311392.jpeg?auto=compress&cs=tinysrgb&w=600" alt="" loading="lazy" /></div>
-          <div class="ce-body"><div class="ce-cat">The Sale</div><div class="ce-title serif">48 hours only</div></div>
+        <div class="frame f3">
+          <div class="inbox-line"><span class="subj">Wonder, in stores now</span><span class="from">Field Notes → you</span></div>
+          <div class="comp-fit" data-ch="760">
+            <div class="comp-canvas" style="height:760px;background:#f4f1eb">
+              <img src="https://images.pexels.com/photos/6311392/pexels-photo-6311392.jpeg?auto=compress&cs=tinysrgb&w=900" alt="" style="position:absolute;left:150px;top:60px;width:402px;height:640px;object-fit:cover" />
+              <div class="ser" style="position:absolute;left:48px;top:60px;width:90px;height:640px"><span style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%) rotate(-90deg);font-size:110px;color:#1a1917;white-space:nowrap;letter-spacing:2px">Wonder</span></div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -300,134 +378,183 @@
   <div class="trust">
     <div class="wrap"><p>Built for <strong>creators, shops, and studios</strong> who believe a newsletter can be as beautiful as the brand behind it.</p></div>
   </div>
-
-  <!-- TEMPLATES -->
-  <section class="block templates" id="templates">
-    <div class="wrap">
-      <div class="head reveal">
-        <span class="eyebrow">Templates</span>
-        <h2 class="serif">Start from something beautiful.</h2>
-        <p>Every template is art-directed down to the last detail. Drop in your words and photos, and you've got an email that looks like you hired a studio.</p>
-      </div>
-      <div class="grid-t">
-        <article class="tcard reveal">
-          <div class="ph"><img src="https://images.pexels.com/photos/4050315/pexels-photo-4050315.jpeg?auto=compress&cs=tinysrgb&w=800" alt="The Welcome Letter template" loading="lazy" /></div>
-          <div class="meta"><div class="cat">Welcome</div><h3 class="serif">The Welcome Letter</h3><p>Make a warm first impression the moment someone joins.</p></div>
-        </article>
-        <article class="tcard reveal">
-          <div class="ph"><img src="https://images.pexels.com/photos/9558577/pexels-photo-9558577.jpeg?auto=compress&cs=tinysrgb&w=800" alt="The Launch template" loading="lazy" /></div>
-          <div class="meta"><div class="cat">Launch</div><h3 class="serif">The Launch</h3><p>Build the moment and land it in every inbox at once.</p></div>
-        </article>
-        <article class="tcard reveal">
-          <div class="ph"><img src="https://images.pexels.com/photos/6311392/pexels-photo-6311392.jpeg?auto=compress&cs=tinysrgb&w=800" alt="The Sale template" loading="lazy" /></div>
-          <div class="meta"><div class="cat">Promotion</div><h3 class="serif">The Sale</h3><p>A clean, urgent layout that turns browsers into buyers.</p></div>
-        </article>
-        <article class="tcard reveal">
-          <div class="ph"><img src="https://images.pexels.com/photos/5704849/pexels-photo-5704849.jpeg?auto=compress&cs=tinysrgb&w=800" alt="The Invitation template" loading="lazy" /></div>
-          <div class="meta"><div class="cat">Event</div><h3 class="serif">The Invitation</h3><p>An elegant RSVP for launches, dinners, and openings.</p></div>
-        </article>
-        <article class="tcard reveal">
-          <div class="ph"><img src="https://images.pexels.com/photos/6957086/pexels-photo-6957086.jpeg?auto=compress&cs=tinysrgb&w=800" alt="The Edit template" loading="lazy" /></div>
-          <div class="meta"><div class="cat">Roundup</div><h3 class="serif">The Edit</h3><p>A curated, magazine-style roundup of what's new.</p></div>
-        </article>
-        <article class="tcard reveal">
-          <div class="ph"><img src="https://images.pexels.com/photos/1109541/pexels-photo-1109541.jpeg?auto=compress&cs=tinysrgb&w=800" alt="The Weekly Letter template" loading="lazy" /></div>
-          <div class="meta"><div class="cat">Newsletter</div><h3 class="serif">The Weekly Letter</h3><p>A quiet, readable rhythm your subscribers look forward to.</p></div>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- FEATURES -->
-  <section class="block" id="features">
-    <div class="wrap">
-      <div class="head reveal">
-        <span class="eyebrow">Why Jounce</span>
-        <h2 class="serif">Everything you need to send like a pro.</h2>
-        <p>The polish of a design studio, the simplicity of a tool you'll actually enjoy opening.</p>
-      </div>
-      <div class="grid-f">
-        <div class="feat reveal">
-          <div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div>
-          <h3 class="serif">Designer templates</h3>
-          <p>Dozens of art-directed layouts, ready to make yours. They look hand-crafted because they were.</p>
-        </div>
-        <div class="feat reveal">
-          <div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><path d="M2 2l7.586 7.586"/><circle cx="11" cy="11" r="2"/></svg></div>
-          <h3 class="serif">Drag-and-drop builder</h3>
-          <p>Move blocks, swap photos, change a color. No code, no fiddling — what you see is exactly what sends.</p>
-        </div>
-        <div class="feat reveal">
-          <div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6M9 13h6M9 17h4"/></svg></div>
-          <h3 class="serif">Forms that grow your list</h3>
-          <p>Beautiful sign-up forms and pop-ups you can publish anywhere — and watch your audience build itself.</p>
-        </div>
-        <div class="feat reveal">
-          <div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 11l19-9-9 19-2-8-8-2z"/></svg></div>
-          <h3 class="serif">Broadcasts &amp; automations</h3>
-          <p>Send to the right people at the right moment — one-off broadcasts or flows that run on their own.</p>
-        </div>
-        <div class="feat reveal">
-          <div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="9" cy="9" r="2"/><path d="M21 15l-5-5L5 21"/><rect x="3" y="3" width="18" height="18" rx="2"/></svg></div>
-          <h3 class="serif">Designed compositions</h3>
-          <p>Layer type over photography with pixel-perfect control — rendered crisply in every inbox, every time.</p>
-        </div>
-        <div class="feat reveal">
-          <div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
-          <h3 class="serif">Audiences &amp; segments</h3>
-          <p>Group subscribers by what they do, then speak to each group like you actually know them.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- COUNTDOWN SPOTLIGHT -->
-  <section class="block spot" id="live">
-    <div class="wrap">
-      <div class="reveal">
-        <span class="eyebrow">Live in the inbox</span>
-        <h2 class="serif">Emails that update themselves.</h2>
-        <p>Add a countdown that's still ticking when your reader opens it — hours later, days later, exactly right. It's the kind of detail that makes people click. And it's built in.</p>
-      </div>
-      <div class="cd reveal">
-        <div class="lab">Launching in</div>
-        <div class="clock" id="clock">
-          <div class="u"><div class="n" data-d>00</div><div class="t">Days</div></div>
-          <div class="sep">:</div>
-          <div class="u"><div class="n" data-h>00</div><div class="t">Hours</div></div>
-          <div class="sep">:</div>
-          <div class="u"><div class="n" data-m>00</div><div class="t">Minutes</div></div>
-          <div class="sep">:</div>
-          <div class="u"><div class="n" data-s>00</div><div class="t">Seconds</div></div>
-        </div>
-        <div class="cap">Rendered live, on every open — a real Jounce countdown.</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- FINAL CTA -->
-  <section class="block final" id="access">
-    <div class="wrap">
-      <div class="reveal">
-        <span class="eyebrow">Coming soon</span>
-        <h2 class="serif">Good email is on its way.</h2>
-        <p class="lede">Join the early list and we'll send a single, well-designed email the day Jounce opens.</p>
-        <div class="capture" id="capture2">
-          <form data-capture>
-            <input type="email" name="email" placeholder="you@yourbrand.com" required autocomplete="email" aria-label="Email address" />
-            <button class="btn" type="submit">Request early access</button>
-          </form>
-          <div class="micro" style="justify-content:center">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
-            We'll only email you once — to say it's live.
-          </div>
-          <div class="thanks" style="justify-content:center"><span class="check"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></span> You're on the list. Talk soon.</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
 </main>
+</div>
+
+<!-- ============================ LIGHT: the work ============================ -->
+<!-- TEMPLATES -->
+<section class="block templates" id="templates" style="background:var(--bg-sunken)">
+  <div class="wrap">
+    <div class="head reveal">
+      <span class="eyebrow">Templates</span>
+      <h2>Start from something you'd actually send.</h2>
+      <p>Every template is art-directed down to the last detail. Drop in your words and photos, and you've got an email that looks like you hired a studio.</p>
+    </div>
+    <div class="grid-t">
+      <article class="tcard">
+        <div class="inbox-line"><span class="subj">A little hello from us</span><span class="from">Bloom &amp; Co → you</span></div>
+        <div class="comp-fit" data-ch="620">
+          <div class="comp-canvas" style="height:620px;background:#fbf7f0">
+            <div style="position:absolute;left:0;top:0;width:600px;height:40px;background:#1f3d34;color:#eae3d6;text-align:center;line-height:40px;font-size:11px;letter-spacing:2px;text-transform:uppercase">New here? Take 15% off</div>
+            <img src="https://images.pexels.com/photos/4050315/pexels-photo-4050315.jpeg?auto=compress&cs=tinysrgb&w=1120" alt="" style="position:absolute;left:0;top:40px;width:600px;height:320px;object-fit:cover" />
+            <div style="position:absolute;left:48px;top:398px;width:504px;text-align:center;color:#a9885b;font-size:11px;letter-spacing:4px;text-transform:uppercase">Welcome</div>
+            <div class="ser" style="position:absolute;left:48px;top:428px;width:504px;text-align:center;font-size:40px;line-height:118%;color:#20302a">A little hello from us</div>
+            <div style="position:absolute;left:200px;top:540px;width:200px;background:#1f3d34;color:#f4efe6;text-align:center;padding:14px 0;font-size:12px;letter-spacing:2px;text-transform:uppercase">Start here</div>
+          </div>
+        </div>
+        <div class="cap"><span class="cat">Welcome</span><span class="nm">The Welcome Letter</span></div>
+      </article>
+      <article class="tcard">
+        <div class="inbox-line"><span class="subj">Final hours — 50% off</span><span class="from">Field Day → you</span></div>
+        <div class="comp-fit" data-ch="420">
+          <div class="comp-canvas" style="height:420px;background:#1a1917">
+            <div class="ser" style="position:absolute;left:48px;top:96px;width:504px;font-size:110px;line-height:110%;color:#fbfaf8;text-align:center">−50%</div>
+            <div style="position:absolute;left:48px;top:268px;width:504px;color:#cfcac2;font-size:11px;letter-spacing:3px;text-transform:uppercase;text-align:center">Final hours — everything we make</div>
+          </div>
+        </div>
+        <div class="cap"><span class="cat">Promotion</span><span class="nm">Promo Splash</span></div>
+      </article>
+      <article class="tcard">
+        <div class="inbox-line"><span class="subj">What readers are saying</span><span class="from">Lumen → you</span></div>
+        <div class="comp-fit" data-ch="560">
+          <div class="comp-canvas" style="height:560px;background:#fbfaf8">
+            <img src="https://images.pexels.com/photos/1109541/pexels-photo-1109541.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="" style="position:absolute;inset:0;width:600px;height:560px;object-fit:cover" />
+            <div style="position:absolute;inset:0;background:rgba(251,250,248,.78)"></div>
+            <div style="position:absolute;left:70px;top:190px;width:460px;font-family:Georgia,serif;font-style:italic;font-size:34px;line-height:150%;color:#1a1917;text-align:center">“The quiet kind of luxury.”</div>
+            <div style="position:absolute;left:70px;top:350px;width:460px;color:#6e695e;font-size:11px;letter-spacing:3px;text-transform:uppercase;text-align:center">— A reader, since 2021</div>
+          </div>
+        </div>
+        <div class="cap"><span class="cat">Testimonial</span><span class="nm">Washed Quote</span></div>
+      </article>
+      <article class="tcard">
+        <div class="inbox-line"><span class="subj">The gift guide is here</span><span class="from">Maison → you</span></div>
+        <div class="comp-fit" data-ch="380">
+          <div class="comp-canvas" style="height:380px;background:#fbfaf8">
+            <img src="https://images.pexels.com/photos/5704849/pexels-photo-5704849.jpeg?auto=compress&cs=tinysrgb&w=600" alt="" style="position:absolute;left:0;top:0;width:296px;height:380px;object-fit:cover" />
+            <img src="https://images.pexels.com/photos/9558577/pexels-photo-9558577.jpeg?auto=compress&cs=tinysrgb&w=600" alt="" style="position:absolute;left:304px;top:0;width:296px;height:380px;object-fit:cover" />
+            <div style="position:absolute;left:0;top:0;width:296px;height:380px;background:rgba(26,25,23,.18)"></div>
+            <div style="position:absolute;left:304px;top:0;width:296px;height:380px;background:rgba(26,25,23,.18)"></div>
+            <div class="ser" style="position:absolute;left:0;top:170px;width:296px;font-size:26px;color:#fbfaf8;text-align:center">For her</div>
+            <div class="ser" style="position:absolute;left:304px;top:170px;width:296px;font-size:26px;color:#fbfaf8;text-align:center">For him</div>
+          </div>
+        </div>
+        <div class="cap"><span class="cat">Gift guide</span><span class="nm">Type-on-Photo Tiles</span></div>
+      </article>
+      <article class="tcard">
+        <div class="inbox-line"><span class="subj">Nº 12 — your weekend, sorted</span><span class="from">The Edit → you</span></div>
+        <div class="comp-fit" data-ch="460">
+          <div class="comp-canvas" style="height:460px;background:#f4f1eb">
+            <div class="scr" style="position:absolute;left:48px;top:128px;width:504px;font-size:88px;line-height:110%;color:#1a1917;text-align:center">The Edit</div>
+            <div style="position:absolute;left:48px;top:300px;width:504px;color:#6e695e;font-size:11px;letter-spacing:3px;text-transform:uppercase;text-align:center">Nº 12 &nbsp;·&nbsp; Ten things worth your weekend</div>
+          </div>
+        </div>
+        <div class="cap"><span class="cat">Newsletter</span><span class="nm">Big Type Cover</span></div>
+      </article>
+      <article class="tcard">
+        <div class="inbox-line"><span class="subj">The gallery wall, at home</span><span class="from">The Gallery → you</span></div>
+        <div class="comp-fit" data-ch="680">
+          <div class="comp-canvas" style="height:680px;background:#fbfaf8">
+            <div style="position:absolute;left:240px;top:40px;width:360px;height:560px;background:#eae3d4"></div>
+            <img src="https://images.pexels.com/photos/7691168/pexels-photo-7691168.jpeg?auto=compress&cs=tinysrgb&w=900" alt="" style="position:absolute;left:48px;top:100px;width:380px;height:440px;object-fit:cover" />
+            <div style="position:absolute;left:48px;top:608px;width:460px;color:#6e695e;font-size:11px;letter-spacing:3px;text-transform:uppercase">The gallery wall, at home</div>
+          </div>
+        </div>
+        <div class="cap"><span class="cat">Editorial</span><span class="nm">Panel</span></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section class="block" id="features">
+  <div class="wrap">
+    <div class="head reveal">
+      <span class="eyebrow">Why Jounce</span>
+      <h2>Everything you need to send like a studio.</h2>
+      <p>The polish of a design team, the simplicity of a tool you'll actually enjoy opening.</p>
+    </div>
+    <div class="grid-f">
+      <div class="feat reveal">
+        <div class="ic"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div>
+        <h3>Designer templates</h3>
+        <p>Dozens of art-directed layouts, ready to make yours. They look hand-crafted because they were.</p>
+      </div>
+      <div class="feat reveal">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M5 3l14 8-6 1.5L11 19 5 3z"/></svg></div>
+        <h3>Drag-and-drop builder</h3>
+        <p>Move blocks, swap photos, change a color. No code, no fiddling — what you see is exactly what sends.</p>
+      </div>
+      <div class="feat reveal">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6M9 13h6M9 17h4"/></svg></div>
+        <h3>Forms that grow your list</h3>
+        <p>Beautiful sign-up forms and pop-ups you can publish anywhere — and watch your audience build itself.</p>
+      </div>
+      <div class="feat reveal">
+        <div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="2.5"/><path d="M4.5 12a7.5 7.5 0 0115 0M2 12a10 10 0 0120 0"/></svg></div>
+        <h3>Broadcasts &amp; automations</h3>
+        <p>Send to the right people at the right moment — one-off broadcasts or flows that run on their own.</p>
+      </div>
+      <div class="feat reveal">
+        <div class="ic"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.6"/><path d="M21 15l-5-5L5 21"/></svg></div>
+        <h3>Designed compositions</h3>
+        <p>Layer type over photography with pixel-perfect control — rendered crisply in every inbox, every time.</p>
+      </div>
+      <div class="feat reveal">
+        <div class="ic"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><path d="M3 20a6 6 0 0112 0M16 5.2a3 3 0 010 5.6M21 20a6 6 0 00-4-5.66"/></svg></div>
+        <h3>Audiences &amp; segments</h3>
+        <p>Group subscribers by what they do, then speak to each group like you actually know them.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ DARK: live + close ============================ -->
+<div class="band-dark">
+<!-- COUNTDOWN SPOTLIGHT -->
+<section class="block spot" id="live">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="eyebrow">Live in the inbox</span>
+      <h2>Emails that update themselves.</h2>
+      <p>Add a countdown that's still ticking when your reader opens it — hours later, days later, exactly right. It's the kind of detail that makes people click. And it's built in.</p>
+    </div>
+    <div class="cd reveal">
+      <div class="lab"><span class="dot"></span> Launching in</div>
+      <div class="clock" id="clock">
+        <div class="u"><div class="n num" data-d>00</div><div class="t">Days</div></div>
+        <div class="sep">:</div>
+        <div class="u"><div class="n num" data-h>00</div><div class="t">Hours</div></div>
+        <div class="sep">:</div>
+        <div class="u"><div class="n num" data-m>00</div><div class="t">Minutes</div></div>
+        <div class="sep">:</div>
+        <div class="u"><div class="n num" data-s>00</div><div class="t">Seconds</div></div>
+      </div>
+      <div class="cap">Rendered live, on every open — a real Jounce countdown.</div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="block final" id="access">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="eyebrow">Coming soon</span>
+      <h2>Good email is on its way.</h2>
+      <p class="lede">You run the business. Jounce runs the marketing. Join the early list and we'll send one well-designed email the day the doors open.</p>
+      <div class="capture" id="capture2">
+        <form data-capture>
+          <input type="email" name="email" placeholder="you@yourbrand.com" required autocomplete="email" aria-label="Email address" />
+          <button class="btn btn-primary" type="submit">Request early access</button>
+        </form>
+        <div class="micro">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+          We'll only email you once — to say it's live.
+        </div>
+        <div class="thanks" style="justify-content:center"><span class="check"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span> You're on the list. Talk soon.</div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <footer>
   <div class="wrap">
@@ -435,20 +562,39 @@
     <div class="meta">
       <span>© 2026 Jounce</span>
       <a href="mailto:hello@jounce.com">hello@jounce.com</a>
-      <a href="/acceptable-use">Acceptable Use</a>
+      <a href="/acceptable-use">Acceptable use</a>
       <a href="/terms">Terms</a>
       <a href="/privacy">Privacy</a>
-      <span>Made with care.</span>
     </div>
   </div>
 </footer>
+</div>
 
 <script>
+  // Fit each designed composition to its frame. The canvas is authored at a
+  // native 600px width (exactly as it rasterizes at send); scale it to the
+  // frame so the real templates stay crisp and responsive at any size.
+  function fitComps() {
+    document.querySelectorAll('.comp-fit').forEach((fit) => {
+      const canvas = fit.firstElementChild;
+      if (!canvas || !fit.clientWidth) return;
+      const h = parseInt(fit.getAttribute('data-ch'), 10) || 600;
+      const s = fit.clientWidth / 600;
+      canvas.style.transform = 'scale(' + s + ')';
+      fit.style.height = h * s + 'px';
+    });
+  }
+  fitComps();
+  window.addEventListener('resize', fitComps);
+  window.addEventListener('load', fitComps);
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(fitComps);
+
   // Scroll reveal — progressive enhancement with two safety nets:
-  // (1) no IntersectionObserver support -> reveal everything immediately,
+  // (1) no IntersectionObserver -> reveal everything immediately,
   // (2) a timeout reveals anything still hidden, so copy can't get stuck.
   const reveals = document.querySelectorAll('.reveal');
-  const showAll = () => reveals.forEach((el) => el.classList.add('in'));
+  const frames = document.querySelectorAll('.frame');
+  const showAll = () => { reveals.forEach((el) => el.classList.add('in')); frames.forEach((el) => el.classList.add('in')); };
   if (!('IntersectionObserver' in window)) {
     showAll();
   } else {
@@ -456,10 +602,12 @@
       entries.forEach((e) => { if (e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
     }, { threshold: 0.12, rootMargin: '0px 0px -6% 0px' });
     reveals.forEach((el) => io.observe(el));
+    // the hero email frames arrive once, staggered — the one jounce (§08.3)
+    frames.forEach((el, i) => setTimeout(() => el.classList.add('in'), 180 + i * 110));
     setTimeout(showAll, 2600);
   }
 
-  // Countdown — to a launch date (UTC), ticks every second
+  // Countdown — to a launch date (UTC), ticks every second. Digits wear .num.
   const LAUNCH = new Date('2026-08-01T16:00:00Z').getTime();
   const pad = (n) => String(n).padStart(2, '0');
   const elD = document.querySelector('[data-d]'), elH = document.querySelector('[data-h]'),
@@ -474,16 +622,13 @@
   }
   tick(); setInterval(tick, 1000);
 
-  // Email capture — no backend yet; record intent via mailto + show thanks
+  // Email capture — no backend yet; record intent via mailto + show thanks.
   document.querySelectorAll('form[data-capture]').forEach((form) => {
     form.addEventListener('submit', (ev) => {
       ev.preventDefault();
       const email = form.querySelector('input[type=email]').value.trim();
       if (!email) return;
-      const wrap = form.closest('.capture');
-      wrap.classList.add('done');
-      // Open a pre-filled note so the address actually reaches us until the
-      // backend waitlist is wired up.
+      form.closest('.capture').classList.add('done');
       try {
         window.location.href = 'mailto:hello@jounce.com?subject=' +
           encodeURIComponent('Early access — Jounce') +
